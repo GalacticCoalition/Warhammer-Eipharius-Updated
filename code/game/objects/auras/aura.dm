@@ -92,7 +92,7 @@ They should also be used for when you want to effect the ENTIRE mob, like having
 
 		for(var/bpart in shuffle(H.internal_organs_by_name - BP_BRAIN))
 			var/obj/item/organ/internal/regen_tox = H.internal_organs_by_name[bpart]
-			if(ORGAN_ROBOT(regen_tox))
+			if(regen_tox == ORGAN_ROBOT)
 				continue
 			if(istype(regen_tox))
 				if(regen_tox.damage > 0 && !(regen_tox.status & ORGAN_DEAD))
@@ -221,8 +221,8 @@ They should also be used for when you want to effect the ENTIRE mob, like having
 	organheal = 25
 	grow_chance = 60
 
-	/obj/aura/regenerating/human/halo/bond
-		var/obj/item/clothing/ring/halodevice/bond
+/obj/aura/regenerating/human/halo/bond
+	var/obj/item/clothing/ring/halodevice/bond
 
 /obj/aura/regenerating/human/halo/New(var/mob/living/user)
 	..()

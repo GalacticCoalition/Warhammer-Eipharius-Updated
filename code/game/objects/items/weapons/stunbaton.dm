@@ -277,7 +277,7 @@
 	stunforce = 0
 	agonyforce = 120
 	status = 0		//whether the thing is on or not
-	/obj/item/cell/bcell
+
 	hitcost = 0
 	block_chance = 30
 	sharpness = 0
@@ -287,6 +287,8 @@
 	weapon_speed_delay = 6
 	status = 1
 	armor_penetration = 4 // 70% vs SOB Power Armor. 95% vs Flak.
+
+/obj/item/cell/bcell
 
 /obj/item/melee/baton/shockmaul/update_icon()
 	if(status)
