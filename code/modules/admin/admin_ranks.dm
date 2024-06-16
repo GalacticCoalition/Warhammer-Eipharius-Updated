@@ -44,6 +44,7 @@ var/list/admin_ranks = list()								//list of all ranks with associated rights
 				if("mentor")				rights |= R_MENTOR
 
 		admin_ranks[rank] = rights
+		admin_ranks["localhost"] = (R_HOST | R_BUILDMODE | R_ADMIN | R_BAN | R_FUN | R_SERVER | R_DEBUG | R_PERMISSIONS | R_POSSESS | R_STEALTH | R_REJUVINATE | R_VAREDIT | R_SOUNDS | R_SPAWN | R_MOD| R_MENTOR) // Local host rank making
 		previous_rights = rights
 
 	#ifdef TESTING

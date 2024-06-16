@@ -147,6 +147,9 @@
 	GLOB.clients += src
 	GLOB.ckey_directory[ckey] = src
 
+	if(is_localhost() && config.localhost_admin)
+		new /datum/admins("localhost", (R_HOST | R_BUILDMODE | R_ADMIN | R_BAN | R_FUN | R_SERVER | R_DEBUG | R_PERMISSIONS | R_POSSESS | R_STEALTH | R_REJUVINATE | R_VAREDIT | R_SOUNDS | R_SPAWN | R_MOD| R_MENTOR), ckey)
+
 	//Admin Authorisation
 	holder = admin_datums[ckey]
 	if(holder)
@@ -538,3 +541,11 @@ client/proc/MayRespawn()
 
 		pct += delta
 		winset(src, "mainwindow.mainvsplit", "splitter=[pct]")
+
+/client/proc/is_localhost()
+	var/static/localhost_addresses = list(
+		"127.0.0.1",
+		"::1",
+		null,
+	)
+	return address in localhost_addresses
