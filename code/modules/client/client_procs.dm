@@ -444,7 +444,6 @@ client/proc/MayRespawn()
 
 /client/New()
 	..()
-	fullscreen()
 
 /client/verb/fullscreen_toggle()
 	set name = ".fullscreen_toggle"

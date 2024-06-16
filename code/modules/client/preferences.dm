@@ -96,7 +96,7 @@ datum/preferences
 	dat += "<br>"
 	dat += player_setup.content(user)
 	dat += "</html></body>"
-	user <<browse(dat,"window=player_panel;size=600x600;can_close=0;can_resize=0;border=[is_bordered];titlebar=[is_bordered]")
+	user <<browse(dat,"window=player_panel;size=600x1000;can_close=0;can_resize=1;border=[is_bordered];titlebar=[is_bordered]")
 
 /datum/preferences/proc/process_link(mob/user, list/href_list)
 
