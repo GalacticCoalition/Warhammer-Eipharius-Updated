@@ -28,6 +28,7 @@ var/list/gamemode_cache = list()
 	var/allow_admin_jump = 1			// allows admin jumping
 	var/allow_admin_spawning = 1		// allows admin item spawning
 	var/allow_admin_rev = 1				// allows admin revives
+	var/localhost_admin = 1				// Localhost is autoadmined.
 	var/vote_delay = 96000				// minimum time between voting sessions (deciseconds, 90 minutes by default)
 	var/vote_period = 900				// length of voting period (deciseconds, default 1 minute)
 	var/vote_autotransfer_initial = 108000 // Length of time before the first autotransfer vote is called
@@ -379,6 +380,9 @@ var/list/gamemode_cache = list()
 
 				if ("allow_admin_spawning")
 					config.allow_admin_spawning = 1
+
+				if("localhost_admin")
+					config.localhost_admin = 1
 
 				if ("no_dead_vote")
 					config.vote_no_dead = 1
