@@ -135,7 +135,7 @@
 
 	var/obj/item/organ/external/affecting = T.get_organ(src.zone_sel.selecting) //yes, these are 3 useless codelines, won't remove them cause if it works it works
 	if(!affecting)
-		to_chat(src, "<span class='warning'>They are missing that body part!</span>") 
+		to_chat(src, "<span class='warning'>They are missing that body part!</span>")
 
 	isconverting = 1
 
@@ -180,7 +180,7 @@
 	T.adjustBrainLoss(-10)
 	T.inject_blood(src, 500)
 	var/datum/heretic_deity/hivemind/N = GOD(GOD_HIVEMIND)
-		N.join_forced(T)
+	N.join_forced(T)
 	return 1
 
 /mob/living/carbon/human/genestealer/proc/ripperswarm() // ok
@@ -282,7 +282,7 @@
 	src.maxHealth = 250
 	src.warfare_language_shit(LANGUAGE_TYRANID)
 	var/datum/heretic_deity/hivemind/N = GOD(GOD_HIVEMIND)
-		N.join_forced(src)
+	N.join_forced(src)
 	src.verbs -= /mob/living/carbon/human/genestealer/proc/givestealerstats //removes verb at the end so they can't spam it for whatever reason
 
 /mob/living/carbon/human/genestealer/proc/gsheal()
