@@ -64,18 +64,18 @@ n_scriptOptions
 															"^=" = "^",
 															"%=" = "%")
 
-				unary_operators =list("!"  = /node/expression/operator/unary/LogicalNot, 		 "~"  = /node/expression/operator/unary/BitwiseNot,
-															"-"  = /node/expression/operator/unary/Minus)
+				unary_operators =list("!"  = /node/expression/oprand/unary/LogicalNot, 		 "~"  = /node/expression/oprand/unary/BitwiseNot,
+															"-"  = /node/expression/oprand/unary/Minus)
 
-				binary_operators=list("==" = /node/expression/operator/binary/Equal, 			   "!="	= /node/expression/operator/binary/NotEqual,
-															">"  = /node/expression/operator/binary/Greater, 			 "<" 	= /node/expression/operator/binary/Less,
-															">=" = /node/expression/operator/binary/GreaterOrEqual,"<=" = /node/expression/operator/binary/LessOrEqual,
-															"&&" = /node/expression/operator/binary/LogicalAnd,  	 "||"	= /node/expression/operator/binary/LogicalOr,
-															"&"  = /node/expression/operator/binary/BitwiseAnd,  	 "|" 	= /node/expression/operator/binary/BitwiseOr,
-															"`"  = /node/expression/operator/binary/BitwiseXor,  	 "+" 	= /node/expression/operator/binary/Add,
-															"-"  = /node/expression/operator/binary/Subtract, 		 "*" 	= /node/expression/operator/binary/Multiply,
-															"/"  = /node/expression/operator/binary/Divide, 			 "^" 	= /node/expression/operator/binary/Power,
-															"%"  = /node/expression/operator/binary/Modulo)
+				binary_operators=list("==" = /node/expression/oprand/binary/Equal, 			   "!="	= /node/expression/oprand/binary/NotEqual,
+															">"  = /node/expression/oprand/binary/Greater, 			 "<" 	= /node/expression/oprand/binary/Less,
+															">=" = /node/expression/oprand/binary/GreaterOrEqual,"<=" = /node/expression/oprand/binary/LessOrEqual,
+															"&&" = /node/expression/oprand/binary/LogicalAnd,  	 "||"	= /node/expression/oprand/binary/LogicalOr,
+															"&"  = /node/expression/oprand/binary/BitwiseAnd,  	 "|" 	= /node/expression/oprand/binary/BitwiseOr,
+															"`"  = /node/expression/oprand/binary/BitwiseXor,  	 "+" 	= /node/expression/oprand/binary/Add,
+															"-"  = /node/expression/oprand/binary/Subtract, 		 "*" 	= /node/expression/oprand/binary/Multiply,
+															"/"  = /node/expression/oprand/binary/Divide, 			 "^" 	= /node/expression/oprand/binary/Power,
+															"%"  = /node/expression/oprand/binary/Modulo)
 
 		New()
 			.=..()
